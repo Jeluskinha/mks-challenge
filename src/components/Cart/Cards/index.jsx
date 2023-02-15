@@ -5,7 +5,7 @@ import { AuthContext } from "../../../context/authContext";
 
 function Cards({id, image, name, price, count}) {
 
-  const { removeToCart, addToCart } = useContext(AuthContext)
+  const { removeToCart, addToCart, excludeToCart } = useContext(AuthContext)
 
 
   return (
@@ -23,7 +23,7 @@ function Cards({id, image, name, price, count}) {
         </div>
       </div>
       <h3>R${price}</h3>
-      <AiFillCloseCircle onClick={() => removeToCart(id)}/>
+      <AiFillCloseCircle onClick={() => excludeToCart(id)}/>
     </CardStyle>
   );
 }

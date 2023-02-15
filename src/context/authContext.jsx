@@ -71,6 +71,17 @@ const AuthProvider = ({ children }) => {
     }
   };
 
+  const excludeToCart = (id) => {
+    const findItemToResetCount = cartList.find((item) => item.id === id);
+    findItemToResetCount['count'] = 0
+
+    const findItem = cartList.findIndex((item) => item.id === id);
+    let newArr = cartList;
+    newArr.splice(findItem, 1);
+    setCartList([...newArr]);
+    countItemInCart()
+  }
+
   return (
     <AuthContext.Provider
       value={{
@@ -83,6 +94,7 @@ const AuthProvider = ({ children }) => {
         ammountItens,
         ammountCost,
         removeToCart,
+        excludeToCart,
       }}
     >
       {children}

@@ -45,7 +45,6 @@ const CardStyle = styled.div`
       padding: 0;
       display: flex;
       justify-content: center;
-      margin-left: -60px;
       span:nth-child(1){
         font-size: 16px;
         padding: 5px;
@@ -82,6 +81,62 @@ const CardStyle = styled.div`
     top: -50px;
     right: -45px;
   }
+  @media (min-width: 441px){
+     h4{
+     }
+     div{
+      span{
+      }
+      .CardItemAmount{
+        margin-left: -60px;
+      }
+     }
+    }
+  @media (max-width: 440px){
+     h4{
+      display: none;
+     }
+     div{
+      span{
+        display: none;
+      }
+      .CardItemAmount{
+        margin-left: 0 auto;
+        span{
+          display: block;
+          padding: 0px;
+          background-color: beige;
+        }
+      }
+     }
+     h3{
+      font-size: 12px;
+     }
+    }
+  @media (max-width: 375px){
+    h4{
+      display: none;
+     }
+     div{
+      span{
+        display: none;
+      }
+      .CardItemAmount{
+        margin-left: 0 auto;
+        span{
+          display: block;
+        }
+      }
+     }
+     h3{
+      font-size: 12px;
+     }
+     svg{
+      min-width: 10px;
+      top: -35px;
+      right: -20px;
+     }
+    }
 `;
 
 export default CardStyle;

@@ -11,7 +11,7 @@ main{
   ul{
     margin: 0 10%;
     height: fit-content;
-    width: 70vw;
+    width: 980px;
     display: flex;
     flex-flow: row wrap;
     justify-content: center;

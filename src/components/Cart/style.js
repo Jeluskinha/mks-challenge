@@ -16,7 +16,7 @@ const CartStyle = styled.aside`
   font-family: var(--fontDefault-2);
   color: var(--fontColor-1);
   div {
-    padding: 20px 30px;
+    padding: 20px 30px 20px 20px;
     height: 100%;
     display: flex;
     flex-direction: column;
@@ -102,6 +102,28 @@ const CartStyle = styled.aside`
     line-height: 15px;
     color: var(--fontColor-1);
   }
+
+  @media (max-width: 440px){
+      width: 365px;
+      div{
+        div{
+      
+          h2{
+            font-size: 18px;
+          }
+          svg{
+          }
+        }
+      }
+    }
+  @media (max-width: 375px){
+      width: 100%;
+      div{
+        div{
+          padding: 10px 10px;
+        }
+      }
+    }
 `;
 
 export default CartStyle;
